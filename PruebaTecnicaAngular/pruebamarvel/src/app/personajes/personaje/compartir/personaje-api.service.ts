@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class PersonajeApiService {
 PUBLIC_KEY = '17556370aa05dfb6038d0542e78dcb0e';
 HASH = '0f7f6340c25ebaf1db4ba95911e3777c';
-URL_API ='https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=17556370aa05dfb6038d0542e78dcb0e&hash=0f7f6340c25ebaf1db4ba95911e3777c';
+URL_API ='https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=17556370aa05dfb6038d0542e78dcb0e&hash=0f7f6340c25ebaf1db4ba95911e3777c&limit=100';
 
   constructor(private http: HttpClient) { }
 

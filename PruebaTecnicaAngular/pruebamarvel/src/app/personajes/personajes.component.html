@@ -1,3 +1,22 @@
-<p *ngFor="let personaje of allPersonajes | async">personajes works!
-    {{personaje | json}}
-</p>
+<div fxFlex FxLayout="column">
+    <div fxLayout ="row wrap">
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let personaje of allPersonajes | async">
+            <mat-card> 
+                <img mat-card-image src ="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}" alt="{{personaje.name}}" class="personajes">
+
+                <mat-card-title>
+                    {{personaje.name}}
+                </mat-card-title>
+
+                <mat-card-footer>
+                    <a href="{{personaje.urls[1].url}}" target="_blank" fxFlex mat-flat-button color="primary">
+                        Detalles
+                    </a>
+                </mat-card-footer>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+

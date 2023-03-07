@@ -1,0 +1,18 @@
+
+<div fxFlex FxLayout="column">
+    <div fxLayout ="row wrap">
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let comic of allComics | async">
+            <mat-card> 
+                <img mat-card-image src ="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="{{comic.name}}" class="comics">
+
+                <mat-card-title>
+                    {{comic.name}}
+                </mat-card-title>
+
+               
+
+            </mat-card>
+        </div>
+    </div>
+</div>
+

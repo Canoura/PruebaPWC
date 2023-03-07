@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,14 +13,27 @@ import { MatListModule } from '@angular/material/list';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ComicComponent } from './comics/comic/comic.component';
+import { ComicsComponent } from './comics/comics.component';
+import { SerieComponent } from './series/serie/serie.component';
+import { SeriesComponent } from './series/series.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PersonajeComponent,
-    PersonajesComponent
-  ],
+    PersonajesComponent,
+    ComicComponent,
+    ComicsComponent,
+    SerieComponent,
+    SeriesComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,7 +44,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatFormFieldModule
+
    
   ],
   providers: [],

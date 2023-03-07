@@ -8,9 +8,10 @@ import {Observable} from 'rxjs';
   styleUrls: ['./personajes.component.css']
 })
 export class PersonajesComponent implements OnInit {
+character: any;
 
   constructor (private personajeSvc: PersonajeApiService){}
-  allPersonajes: Observable<any> | undefined;
+  allPersonajes!: Observable<any>;
 
  ngOnInit(){
 this.getPersonajes();
