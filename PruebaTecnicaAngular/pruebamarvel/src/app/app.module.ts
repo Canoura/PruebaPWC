@@ -23,6 +23,7 @@ import { SeriesComponent } from './series/series.component';
 import { HomeComponent } from './home/home.component';
 import {MatPaginatorModule} from '@angular/material/paginator'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -54,7 +55,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatCardModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule   
+    MatProgressSpinnerModule,
+    NgxPaginationModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

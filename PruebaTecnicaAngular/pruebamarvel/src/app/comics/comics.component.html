@@ -1,7 +1,7 @@
 
 <div fxFlex FxLayout="column">
     <div fxLayout ="row wrap" class="uno">
-        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let comic of allComics | async" class="uno">
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let comic of allComics | async | paginate:{itemsPerPage:12, currentPage:page}" class="uno">
             <mat-card> 
                 <img mat-card-image src ="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="{{comic.name}}" class="comics">
 
@@ -18,5 +18,7 @@
             </mat-card>
         </div>
     </div>
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+    nextLabel="Siguiente" ></pagination-controls>
 </div>
 

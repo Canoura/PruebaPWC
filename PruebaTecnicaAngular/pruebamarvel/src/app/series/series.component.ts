@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class SeriesComponent implements OnInit {
   character: any; 
+  public page!: number;
 
 constructor (private serieSvc: SeriesApiService) { }
 

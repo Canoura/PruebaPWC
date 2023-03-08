@@ -2,7 +2,7 @@
 <div fxFlex fxLayout="column">
   
     <div fxLayout="row wrap" class="uno">
-      <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let personaje of allPersonajes | async" class="uno">
+      <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let personaje of allPersonajes | async | paginate:{itemsPerPage:12, currentPage:page}" class="uno">
         <mat-card>
           <img mat-card-image src="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}" alt="{{personaje.name}}" class="personajes">
   
@@ -18,10 +18,9 @@
         </mat-card>
       </div>
     </div>
-  
-    <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="getPaginatorData($event)" aria-label="Selecciona página">
-    </mat-paginator>
 
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+    nextLabel="Siguiente" ></pagination-controls>
   </div>
   
 

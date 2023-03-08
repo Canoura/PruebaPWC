@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 
 export class ComicsComponent implements OnInit{
 character: any; 
+public page!: number;
 
 constructor (private comicSvc: ComicsApiService) { }
 
