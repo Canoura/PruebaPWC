@@ -1,6 +1,6 @@
 <div fxFlex FxLayout="column">
-    <div fxLayout ="row wrap">
-        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let serie of allSeries | async">
+    <div fxLayout ="row wrap" class="uno">
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"*ngFor= "let serie of allSeries | async" class="uno" >
             <mat-card> 
                 <img mat-card-image src ="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="{{serie.name}}" class="series">
 

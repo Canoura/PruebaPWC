@@ -17,4 +17,6 @@ URL_API ='https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=175563
     return this.http.get<any>(this.URL_API)
     .pipe(map((data: any)=> data.data.results))
   }
+
+  
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { ComicsComponent } from './comics/comics.component';
 import { SeriesComponent } from './series/series.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,12 @@ const routes: Routes = [
 },
 {
   path: 'series', component: SeriesComponent
+},
+{
+  path:'', redirectTo: '/home', pathMatch: 'full'
+},
+{
+  path: 'home', component: HomeComponent
 }
 
 ];

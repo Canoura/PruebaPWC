@@ -20,6 +20,10 @@ import { ComicComponent } from './comics/comic/comic.component';
 import { ComicsComponent } from './comics/comics.component';
 import { SerieComponent } from './series/serie/serie.component';
 import { SeriesComponent } from './series/series.component';
+import { HomeComponent } from './home/home.component';
+import {MatPaginatorModule} from '@angular/material/paginator'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -33,6 +37,7 @@ import { SeriesComponent } from './series/series.component';
     ComicsComponent,
     SerieComponent,
     SeriesComponent,
+    HomeComponent,
    ],
   imports: [
     BrowserModule,
@@ -47,9 +52,9 @@ import { SeriesComponent } from './series/series.component';
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
-    MatFormFieldModule
-
-   
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
